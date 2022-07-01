@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-Br">
+    <head>
+        <meta charset="utf-8"><!-- usamos isso para poder usar nossa norma culta padrão, tive que colcoar pois o professor esqueceu
+        e o sofware não soube ler a nomra culta-->
+        <meta charset="ISO-8859-2"><!-- sinceramente ainda não sei o que é-->
+        <title>Curso HTML5 Essencial</title>
+        <link rel="stylesheet" href="estilos.css"> <!-- chamando a biblioteca do css-->
+        <style>
+            body{
+                background-color: rgb(223, 175, 45);
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 50px;
+
+
+            }
+
+        </style>
+            <!--criando uma tag/classe chamado prato, o ponto antes da tag especifica que é uma classe
+                nela o código manda a imagem ir a direita com o float right
+                 -->
+        <style>
+            .clear-right{
+                clear: right;
+                margin-top: 10px;
+            }
+
+            .img-prato{
+                float: right;
+                margin-left: 10px;
+                border: 3px solid #000;
+
+            }
+
+            .img-prato2{
+                float: left;
+                margin-right: 10px; 
+                border: 3px solid #000;
+
+
+            }
+
+
+
+        </style>
+        <!--Lembrando que esse comando não irá funcionar se tiver o código na tag img para que os caracteres fiquem
+             a esquer ou a direita da imagem
+            
+            Após o float para a direita colocado margin-left para ter um distanciamento do texto-->
+    
+    </head>
+
+    <body>
+        <h1>Receita Pato com laranja</h1>
+
+        <h3>Mode de preparo</h3>
+                <!-- 1)colocando imagem por link da internet.
+                    2)mais a frente usando o width (largura) para denominar a largura que quero.
+                    3)E o height (altura) para denominar a altura.
+                    4)O title usado para colocar o título da imagem quando se põe o mouse em cima.
+                    5)O Alt tem a função de mostrar o título visivelmente quandoa  imagem não estiver carregando
+                    6)O style="float:left é para a imagem ficar a esquerda da frase"
+                    7)O margin é para escolher a margem que quer afastar e o right é a direção
+                    8)O border:"valor"px é usado para adiconar uma borda a tag a qual ele está sendo inserido
+                    9)O solid para escolher uma cor solida logo após seguido de #" e o número desejado sendo geralmente em 3 digitos como" "solide #000" -->
+                  
+                  
+            <img src="https://www.teleculinaria.pt/wp-content/uploads/2017/11/Pato-com-laranja-18.jpg" width="350" height="350"
+            title="Foto pato com laranja e porções de batatas"
+            alt="Foto pato com laranja e porções de batatas"
+            style=" border:3px solid #000; margin-bottom: 20px;"
+            class="img-prato"><br>
+   
+
+            <p>Descasque as batatas e cozinhe <br><!--<br> é para quebrar linhas-->
+            até ficarem al dente. Retire toda a polpa das laranjas e corte as cascas em tiras finas.<br>
+            Deixe ferver as cascas em uma panela, por cinco minutos, e coe-as. Repita o processo por 3 vezes<br>
+            para tirar o amargo da casca. Mas guarde a água da fervura e reserve as cascas.<br>
+            Assim você terá o resultado tanto requerido para ter seu delicioso prato de pato com laranja e batatas.<br>
+            Nos siga para mais dicas.<br></p>
+            
+            <p>Descasque as batatas e cozinhe até ficarem al dente. Retire toda a polpa das laranjas e corte as cascas em tiras finas. Deixe ferver as cascas em uma panela, por cinco minutos, e coe-as. Repita o processo por 3 vezes para tirar o amargo da casca. Mas guarde a água da fervura e reserve as cascas.</p>
+      
+		<h3 class="clear-right">Segredo do chef</h3>
+             
+            <img src="https://www.cozinharsemstress.pt/cozinhar/wp-content/uploads/2017/06/A1-1425409-site.jpg" width="300" height="300"
+            title="Foto do pato com laraja simples"
+            alt="foto do pato com laranja simples"
+            class="img-prato2">
+            <!-- Após usado a classe img-prato a segunda imagem fica a direita do texto-->
+          
+		    <p>Pincele todo o pato com óleo e tempere com sal e pimenta-do-reino a gosto. Em uma panela com um pouco de óleo, sele todos os lados do pato. Retire o pato e o óleo da panela, colocando a água da fervura da laranja com o açúcar na panela. Adicione o vinagre e mexa tudo até engrossar. Adicione o suco de 3 laranjas e o caldo de carne. </p>
+        
+		    <p>Volte o pato na panela, regue-o com o molho da panela e deixe cozinhar por duas horas, sempre regando ele a cada 10 minutos. Após cozido, esprema mais uma laranja e um limao na panela e coloque as batatas, as cascas de laranja e tempere com salsinha por cima.</p>
+         
+            
+
+        <h3 class="clear-right">Ingredientes</h3>
+        <!-- após usar o clear right o texto fica a baixo da imagem-->
+        
+        <ul>
+            <li>1 pato inteiro limpo</li>
+            <li>500g batata pequena</li>
+            <li>Suco de 3 laranjas</li>
+            <li>Suco de 1 limão</li>
+            <li>100g açucar</li>
+            <li>12 xícara de óleo</li>    
+            <li>Pimenta-do-reino</li>
+            <li>Sal</li>
+            <li>20g de salsinha picada</li>
+        </ul>
+    </body>
+</html>
