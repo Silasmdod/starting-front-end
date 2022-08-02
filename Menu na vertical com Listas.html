@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Curso de HTML5 - Menu Vertical</title>
+        <!--
+            Procedimento 
+            1- no ul, tirar a margem com o margin 0 e o padding 0
+                E width para diminuir o espaço do link   
+            2- No li, tirar os bullet points com o life style: non;
+            3- no li a, colocar as especificações das ancoras
+                o display: block; faz com que o link permaneça na linha ao invés de só passar o mouse no "link"
+                o text-decoration: non; é para tirar a linha sublinhada,
+                o backgound-color é para dar a cor
+                o margin-bottom para criar uma margem entre os links
+                O padding para dar um espaço para cima de largura do link e da fonte
+                o color para mudar a cor da fonte da ancora
+            4- No li a:hover para mudar quando passar o mouse por cima
+        -->
+        <style>
+			body {
+				font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+				font-size:13px;
+			}
+			
+			ul {
+                margin: 0; padding: 0;
+                width: 200px;
+				
+			}
+			
+			li {
+                list-style: none;
+			
+			}
+			
+			li a {
+                display: block;
+                text-decoration: none ;
+                background-color:steelblue;
+                margin-bottom: 1px;
+                padding: 5px 3px;
+                color: aliceblue;
+
+				
+			}
+			
+			li a:hover {
+                background-color: rgb(88, 162, 223);
+			
+			}
+        </style>
+        
+        </head>
+
+        <body>        
+            <ul>
+                <li><a href="brasil.html">Brasil</a></li>
+                <li><a href="portugal.html">Portugal</a></li>
+                <li><a href="angola.html">Angola</a></li>
+                <li><a href="mocambique.html">Moçambique</a></li>
+                <li><a href="caboverde.html">Cabo Verde</a></li>
+            </ul>
+        </body>
+</html>
