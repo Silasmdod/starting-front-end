@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <title>Curso HTML5 Essencial</title>
+        
+        <link href="css/estilo.css" rel="stylesheet" media="screen">
+    </head>
+
+    <body>
+        
+        <h2>Formulário</h2>
+        <form action="destino.html" method="post">
+
+
+            <label for="nome">Nome do Usuário</label>
+            <input type="text" name="nome" id="nome" size="30" maxlength="100" required placeholder="Insira o seu nome" autofocus>
+            <!--O autofocus é para dar um foco no campo que este item está sendo requisitado, por exemplo o curso para digitar já está ativado no site-->
+            <!-- o placeholder é para você colocar uma éspecie de informação dentro do campo formulário-->
+            <!-- O required é usado para um campo requerido ou seja obrigatório de ser preenchido-->
+            <!--O size é os caracteres de largura do box do type text
+            e o maxlenght é o máximo de carcteres-->
+
+
+            <label for="telefone">Telefone</label>
+            <input type="tel" name="telefone" id="telefone" size="20" maxlength="30"><!--type"tel" para aparecer caracteres de números para telefone em aparelhos celulares-->
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" size="30" maxlength="60" required><!-- a opção email é para trazer o arroba no smartphone
+            -->
+
+            <label for="website">Web Site</label>
+            <input type="url" name="website" id="website" size="30" maxlength="60"><!-- já vem com alterações já colocadas como um ".com" já colocado-->
+
+            <input type="submit" value="Enviar" id="enviar" name="enviar">
+        </form>
+        
+    
+    </body>
+</html>
