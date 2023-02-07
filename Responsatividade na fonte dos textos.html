@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Curso de CSS3 - Essencial</title>
+        <meta charset="utf-8">
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    
+        <style>
+
+            body {
+                font-family: Roboto, sans-serif;
+
+            }
+
+            h1 { 
+                /* aprendendo *talvez* a fazer uma unidade de fonte relativa, ou seja muito provavelmente faze resposividade no site*/
+
+                /*  medida é "em" faz o mesmo efeito que o "%" exemplo 300% equivale a 3em */
+                font-size: 2em;
+                font-style: italic;
+                font-weight: 350;
+
+                /* outra coisa para transformar as letras em geral é o text-transform: uppercase (que deixa todas as letras maiúsculas)
+                o lowercase que deixa todas minúsculas
+                e o capitalize que deixa todas as primeiras letras maiúsculas
+                */
+                
+
+            }
+
+            h4 {
+                font-size: 1.2em;
+                text-decoration: underline;
+
+            }
+
+            p {
+                font-size: 1.1em;
+                font-weight: 300;
+                text-align: justify;/* o font-weigth em resumo é o tamanho do corpo do da fonte do texto
+                
+                definições de text align: 
+                quando não temos text-align o texto fica alinhado a esquerda 
+                se colocarmos um text align:right ele ficará alinhado a diretia do site
+                se colocarmos um text-align:center ele ficará no centro
+                e se colocarmos um text-align: justify ele ficará alinhado para os dois lados*/
+
+                line-height: 1.8em;/* usado para dar espaçamento entre as linhas de cima a baixo, também muito utilizado por saites militares, para uma melhor compreensão
+                */
+
+                text-indent: 1.2em;/*text-idente para ajustar de maneira fixa deixa o texto começando numa mesma linha de paragrafo*/
+
+                text-decoration: none;/*define como vai ficar sublinhado o texto, se é embaixo ou em cima, ou sob a palavra (underline sendo o padrão"em baixo")
+                (overline em cima) e (line-through sendo sob a frase) e o famoso text-decoration: none para tirar a decoração do texto */
+                
+
+            }
+
+            a{
+                text-decoration: none;
+            }
+
+            .italico {
+
+            }
+
+            .detaqueNegrito {
+                	
+            }
+
+        </style>
+
+
+    </head>
+
+    <body>
+        <h1>Cascading Style Sheets</h1>
+        <h4>Origem: Wikipédia, a enciclopédia livre.</h4>
+        <p><a href="#">Cascading</a> Style Sheets (ou simplesmente CSS) uma linguagem de estilo utilizada para definir a apresentação de documentos escritos em uma linguagem de marcação, como ou XML. Seu principal benefício é prover a separação entre o formato e o conteúdo de um documento.</p>
+        <p>Em vez de colocar a formatação dentro do documento, o desenvolvedor cria um link (ligação) para uma página que contém os estilos, procedendo de forma idêntica para todas as páginas de um portal. Quando quiser alterar a aparência do portal basta portanto modificar apenas um arquivo.</p>
+    </body>
+</html>
