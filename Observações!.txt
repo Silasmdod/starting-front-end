@@ -1,0 +1,9 @@
+Dá para comentar o css o comando é semelhante ao do java
+/* escrever aqui dentro */
+
+
+Diferença de ID para Class
+
+O Id é uma identificação que criamos para um único elemento do HTML
+já o Class também é o nome atribuído a um elemento HTML mas ele podes ser 
+aplicado a mais d eum elemento no mesmo documento web
