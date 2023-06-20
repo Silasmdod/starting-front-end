@@ -19,21 +19,19 @@
 
             main {
                 width:660px;
+                height: 3000px;
                 background-color:rgb(255,255,255);
                 font-family:Arial, Helvetica, sans-serif;
                 font-size:14px;
                 box-shadow: 0 0 10px #666;
                 margin:10px auto;
                 padding:10px;
-                position: relative;
-                height: 500px;
             }
 
             #principal {
                 background-color:rgb(240,240,240);
                 border:1px dotted #666666;
                 margin-top:20px;
-                position: absolute;
             }
 
             section {
@@ -42,25 +40,21 @@
 
             .janela1 {
                 background-color:rgb(153,204,51);
-                position: absolute;
-                top: 10px; left: 10px;
-                z-index: 2; /* é pelo z-index e o número do lado que se decide se o objeto vai estar na frente ou atrás,
-                 quanto maior for o número mais afrente
-                o objeto estará*/
+                position: fixed; /* isso faz com que o elemento seja fixo na tela, ele não
+                 vai se mover, isso é muito usado para fazer abas fixas em cima ou em baixo nos sites*/
+                width: 100%;
+                top: 0px;
+                right: 0px;
+                left: 0;
+                /*Básicamente é assim que é feito uma página com aba fixa em cima*/
             }
 
             .janela2 {
                 background-color:rgb(255,204,51);
-                position: absolute;
-              
-               
             }
 
             .janela3 {
                 background-color:rgb(51,153,204);
-                position: absolute;
-                top: 20px; left: 20px;
-                z-index: 4;
             }
         </style>
     </head>
