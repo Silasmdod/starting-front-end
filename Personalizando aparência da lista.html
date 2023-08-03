@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <!-- Personalizando a aparência de uma lista-->
+        <meta charset="utf-8">
+        <title>Curso de CSS</title>
+        <style>
+            body {
+                font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; 
+                font-size:14px;
+            }
+
+           ul, ol {
+                list-style-image: url(imagens/estrela.png); /*Também dá para personalizar os símbolos com imagens, ou link de imagens
+                para tirar os espaçõs e aproximar da borda só colocar margin: 0; padding:0;*/
+                
+            }
+
+           
+
+            li{
+                background-color: aliceblue;
+                /*list-style-position: inside;
+                Ele serve para trazer os pontos para dentro da lista
+                */
+            }
+        </style>
+
+        <body>
+
+            <ul>
+                <li>Brasil</li><!-- listas não ordenadas-->
+                <li>Portugal</li>
+                <li>Angola</li>
+                <li>Moçambique</li>
+                <li>Cabo Verde</li>
+            </ul>
+
+            <ol>
+                <li>Brasil</li>
+                <li>Portugal</li>
+                <li>Angola</li>
+                <li>Moçambique</li>
+                <li>Cabo Verde</li>
+            </ol>    
+
+        </body>
+</html>
