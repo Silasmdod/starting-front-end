@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Curso de CSS</title>
+        <style>
+            body {
+                font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+                font-size:14px;
+            }
+
+            li:first-child{/* first chield para ser apenas o primeiro elemento do parâmetro usado, que no caso seria Brasil*/
+                color: rgb(0, 204, 255);
+            }
+
+            li:last-child{/*último elemento*/
+                color: chartreuse;
+            }
+
+            li:nth-child(3){/* enésimo filho, voce determina qual é ele, e coloca a númeração do elemento para escolher em específico qual elemento você quer mexer*/
+             color: brown;
+            }
+
+            /*
+            li:nth-child(odd){ colocando odd, todos os elementos impares do objeto estarão sujeitos a alteração e se quiser elementos pares: "even"
+             color:blueviolet;
+            }
+            */
+        </style>
+    </head>
+
+    <body>
+
+        <ul> <!-- personalizando uma ocorrencia em específico na lista
+        
+        Já aprendemos como fazer isso via style, agora o exemplo de cima é via css-->
+            <li >Brasil</li>
+            <li>Portugal</li>
+            <li>Angola</li>
+            <li>Moçambique</li>
+            <li>Cabo Verde</li>
+        </ul>  
+
+    </body>
+</html>
