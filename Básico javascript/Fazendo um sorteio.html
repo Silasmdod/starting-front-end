@@ -1,0 +1,34 @@
+<html lang="pt-bt">
+    <head>
+<!-- Fazendo código para sortear 6 números para a "megasena"-->
+        <title>Aulas de Javascript</title>
+        <script>
+            var sorteio;
+            var mega =  new Array();
+
+            var i=0;
+            while (i<6){
+                sorteio = Math.ceil(Math.random()*60);
+                if (mega.indexOf(sorteio) < 0 ){// isso aqui é para o número do index [0] seja menor que zero ou menos um
+                    //para ser um número novo e não repetitivo
+                    //então ele vai comprar se o número for menor do que o 1 ou 0 já apresentado ele vai inserir 
+                    mega.push(sorteio);
+                    i++;
+                }
+            }
+
+            
+            function ordenarNumeros(a, b){
+                return a-b;
+            }
+
+
+
+            mega.sort(ordenarNumeros);
+            console.log(mega);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
