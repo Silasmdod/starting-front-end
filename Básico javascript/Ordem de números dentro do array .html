@@ -1,0 +1,34 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Aulas de Javascript</title>
+        <!--Aprendendo a ordenar os elementos no array-->
+        <script>
+            /*
+            var salada = new Array();
+            salada[0] = "Uva";
+            salada[1] = "Mamão";
+            salada[2] = "Pêra";
+            salada[3] = "Maçã";
+            salada.push("Abacate");*/
+
+            function ordenarNumeros(a, b){
+                return a - b; //isso aqui não é diminuindo mas fazendo a comparação e ordenação
+                
+
+            }
+
+            var megasena = new Array(43, 10, 3, 2, 1, 59);
+
+
+
+
+            megasena.sort(ordenarNumeros); //deixou ordenado por ordem alfabética de string
+            //Não existe métodos para ordenar números então é necessário a criação de uma função
+            console.log(megasena);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
