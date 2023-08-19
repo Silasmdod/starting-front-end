@@ -9,11 +9,15 @@
             var i=0;
             while (i<6){
                 sorteio = Math.ceil(Math.random()*60);
-                if (mega.indexOf(sorteio) < 0 ){// isso aqui é para o número do index [0] seja menor que zero ou menos um
-                    //para ser um número novo e não repetitivo
-                    //então ele vai comprar se o número for menor do que o 1 ou 0 já apresentado ele vai inserir 
-                    mega.push(sorteio);
+                if (mega.indexOf(sorteio) < 0 ){// Aqrui está havendo uma compração do indexOf do mega usando o sorteio como parâmetro
+                    // se o indice de Mega não existir no caso [] então
+                    //ele irá continuar o código
+                    mega.push(sorteio);//recebendo o push
                     i++;
+
+                    //mas se o índice de mega.indexOf usando sortei como parâmetro já tiver um índice então
+                    //não será aceitou pois  será igual a [0] ou maior [1] [2] [3] e por aí vai
+                    
                 }
             }
 
