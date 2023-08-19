@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Aulas de Javascript</title>
+        <!--Aprendendo métodos de string
+        nos concentrando no charAt-->
+        <script>
+            var frase = "Meu time fez um gol";
+            console.log("No var frase está escrito:" + frase);
+            //quero pegar a primeir aletra da frase
+
+            var primeira = frase.charAt(1);//aqui vamos pegar uma posição da string "frase" e para pegar
+            //determinada letra numa frase é a mesma lócia do array pelo índice 
+            console.log("O var primeira está recebendo o caractere do índice [1] que corresponde a letra: " + frase.charAt(1));
+
+            //agora fazer pra pegar apenas o primeiro nome
+
+            var letra = "";
+            console.log("Conteudo do var letra: " + letra);
+            var primeira_palavra = "";
+            console.log("Conteúdo do var primeira_palavra: " + primeira_palavra );
+            var i = 0;
+
+            while( letra != " "){
+                console.log("Acompanhando o var 'letra': " + letra)
+                letra = frase.charAt(i);
+                primeira_palavra += letra;//aqui está sendo concatenado ou seja se não tem nada vai ter M, ao invés de receber
+                //é concatenado ou seja se a próxima letra for e irá ficar Me
+                console.log("Palavra que foi adicionado dessa vez: " + primeira_palavra);
+                i++;
+                console.log(i);
+
+
+
+            }
+            console.log("Resultado final da operação: " + primeira_palavra);
+            
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
