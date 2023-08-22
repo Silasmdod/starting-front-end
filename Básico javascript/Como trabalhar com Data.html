@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Aulas de Javascript</title>
+        <!--aprendendo sobre o objeto date-->
+        <!--para resgatar ou criar as datas do nosso sistema
+        
+        
+        //agora.getFullYear() retorna o ano que estamos
+            //agora.getMonth() o mês 0 a 11 sendo 0 janeiro até 11 dezembro
+            //agora.getDate() o dia 1- a 31
+            //agora.getDay() retorna um dia entre domingo e sábado (0 significa domingo, até o 6 sab)-->
+        <script>
+            var meses = ["Janeiro", "Fervereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro" ];//criando a solução pro problema de indice do getMonth num array
+            var dia_semana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
+            var agora = new Date();//transformando em classe Date
+            console.log(agora.getDate() + " de " + meses[agora.getMonth()] + " de " + agora.getFullYear());//ele chamou o agora.getMonth como se fosse um índice dentro do meses
+            //assim o mês de agora que seria 7 seria o índice 7 em mêses e puxaria agosto [7]
+
+
+            //determinar uma data para outro lugar
+            console.log("determinar uma data para outro lugar");
+
+            var aniversario = new Date(2002, 2, 2 );
+
+          
+            console.log("Dia da semana que nasci no meu aniversário foi um dia de " + dia_semana[aniversario.getDay()]);
+
+            
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
