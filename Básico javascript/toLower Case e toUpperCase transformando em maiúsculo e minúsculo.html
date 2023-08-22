@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Aulas de Javascript</title>
+        <!--Usando méotod toLowerCase e toUpperCase
+        Transformando em letras maiúsculas ou minusculas-->
+        <script>
+            var nome = "matheus victor fontenelle";
+            //console.log(nome.toUpperCase()); // para transformar todas as letras em maiúsculo
+            //console.log(nome.toLowerCase()); // para transformar todas as letras em minúsculo
+
+
+            //transformando apenas a primeira letra em maísucula
+            var letras_minusculas = nome.toLocaleLowerCase(); //Trasnformando todas em minúsculas, pois não se sabe
+            //como o usuário escreveu
+            var primeira = letras_minusculas.charAt(0).toLocaleUpperCase();//transformando apenas a primeira letra em maiúsculo
+
+
+
+           var primeiro_nome = primeira +  letras_minusculas.substr(1,15);// como ao declarar letras_minusculas
+            //seria posto a fras inteira, usa-sse o substr para puxar o índice desejado.
+
+            console.log(primeiro_nome.split(" ")[0]);//aqui estou pegando o primeiro nome com a letra maiúscula
+    
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
