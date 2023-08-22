@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Aulas de Javascript</title>
+        <!-- Como trabalhar com o substr-->
+        <script>
+            var nome = "Curso Javascript Fundamental";
+            console.log("Acompanhando a frase inteira: " + nome);
+            var primeira = "";
+            
+            var letra = ""
+            var i = 0;
+            while(letra != " " ){
+                letra =nome.charAt(i);
+                console.log("Acompanhando o letra: " + letra);
+                primeira = nome.substr(0,i);//vai ser do zero até aonde o "i" estiver como índice 
+                console.log("Acompanhando o primeiro nome: " + primeira);
+                i++;
+
+            }
+            //Pegando a primeira palavra
+            //var primeira = nome.substr(0,5);
+            //o substr você consegue estrair até onde desejar 
+            //se eu quero a palavra "Curso" inteira basta botar
+            //o índice inicial até o final, o que ficaria (0,5)
+
+            console.log(primeira);
+            
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
