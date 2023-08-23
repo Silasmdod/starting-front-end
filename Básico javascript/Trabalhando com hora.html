@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Aulas de Javascript</title>
+        <!-- Trabalhando com hora-->
+        <script>
+            var agora =  new Date();
+            //como eles puxam as horas com um dígito se for uma hora decimal sem segundo dígio, vamos criar uma função para colocar dígitos
+             function setDoisDigitos(tempo){
+                if (tempo < 10){
+                    return "0" + tempo; //concatena, se o número for solo receberá o 0 na frente
+
+                } else {// se não for inserir o número normalmente
+                    return tempo;
+                }
+             }
+
+
+           console.log(setDoisDigitos (agora.getHours()) + ":" + setDoisDigitos(agora.getMinutes()) + ":" + setDoisDigitos(agora.getSeconds()));// aqui está horas, minutos e segundos
+            //para usar o tempo você faz depois de 
+            //inserir o objeto dentro da classe Date
+
+            //determinando uma hora
+            var aniversario = new Date(2005,11,5,6, 2, 1);// os três primeiros digitos são ano, mês e dia e os 3 últimos hora, minutos e segundos
+            
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
