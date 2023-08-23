@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Aulas de Javascript</title>
+        <!--Como trabalhar com objeto definir um método-->
+        <script>
+            var produto = new Object();
+            
+            produto.nome = "Caneta";
+            produto.preco = 1.99;
+            produto.cor = "Azul";
+
+
+            function retornarInfo(){//crio uma função que retorna um produto do objeto nome lá em cima
+                return "Meu produto " + this.nome + " Custa: R$:" + this.preco;
+            }
+
+            produto.info = retornarInfo;// e criasse um elemento dentro da classe Object que receba a função retornarInfo();
+            //nesse caso não precisa colocar o abre e fecha parenteses
+
+            console.log(produto.info());//nesse caso tem que colocar o abre e fecha parênteses
+
+            alert(produto.info());
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
