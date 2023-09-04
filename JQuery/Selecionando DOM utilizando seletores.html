@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title> 
+        <!--Selecionar elementos DOm utilizando seletores-->
+    </head>
+
+    <body>
+    	<nav>
+        	<a href="#">Brasil</a>
+            <a href="#">Argentina</a>
+            <a href="#">Uruguai</a>
+            <a href="#">Chile</a>
+            <a href="#">Comlombia</a>
+        </nav>
+
+        <a href="#">Paraguai</a>
+        
+		<!-- scripts -->
+        <script src="jquery-3.2.1.min.js"></script>
+        <script>
+            //contando o número de elementos dentro da página (DOM) colocasse o $ que é jQuery e referencia-se o elemento
+            //ficando $("a") e o elemento dentro das aspas
+            //o ".lenght" é para contar a quantidade do elemento referenciado na página
+            //e se eu quiser uma pesquisa mais específica dentro da tag eu coloco $("nav a") nav espaço a, ele
+            //vai procurar todas as ancoras dentro do elemento nav
+
+        //alert("Essa página contém " + $("nav a").length + " links");-------------------------------
+        //length para saber o número de elementos que você quer saber  
+
+        //outra coisa que dá pra fazer como jQuery é mudar o css dos elementos
+
+        $(function(){
+            $("nav a:first").css("color","red").css("text-decoration", "none").css("display","block");//aqui estou acessando o elemento a dentro do elemento nav
+            //acessando o css ".css" e mudando a cor do elemento a
+            //se você quiser economizar em linha só emendar o text-decoration no que já estava
+            //se você for específicar ainda mais no jQuery  colocar: como no $("nav a:first") estou dizendo que somente o primeiro elemento a
+
+        })
+        	
+        </script>   
+                
+    </body>
+</html>
