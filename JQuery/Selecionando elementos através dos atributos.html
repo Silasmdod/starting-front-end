@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+        <!--Selecionando elementos através de atributos-->
+        
+        <style>
+			body { font-family:Arial, Helvetica, sans-serif; font-size:0.9em; }
+			li { padding:5px;margin-bottom:1px }
+			.vermelho { color:#F00 }
+			.verde { color:#096 }
+		</style>
+
+		<script src="jquery-3.2.1.min.js"></script>
+        <script>
+			$( function(e) {
+                $("li.verde").css("background-color", "#FF9");
+                /*
+                para colocar o atributo se coloca entre [atributo]
+                como especificar um atributo dentro do atributo exemplo [id][tilte]
+                ou um atributo do atributo exemplo [id='texto2']
+                outro jeito mais simples é simplesmente botar o primeiro elemento.atributo 
+                exemplo: li.verde como se faz com classe no css
+                e com id é o # para id mesma coisa dentro do css
+
+                */
+				
+            });
+		</script>
+    </head>
+
+    <body>
+    	<ul>
+            <li class="vermelho">Curso HTML5 Essencial</li>
+            <li class="verde">Curso CSS3 Essencial</li>
+            <li id="texto1">Curso Javascript Essencial</li>
+            <li id="texto2" title="Esse curso">Curso jQuery Fundamental</li>             
+    	</ul>
+    </body>
+</html>
