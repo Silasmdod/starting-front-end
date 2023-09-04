@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+        <!--Como manipul\ar objetos, como inserir elementos-->
+        
+        <style>
+			ul		{ margin:0; padding:0; list-style:none }
+			li		{ display:inline-block; margin-right:10px }
+		</style>
+        
+        <script src="jquery-3.2.1.min.js"></script>
+        <script>
+			$( function(e) {
+                $("<li><img src='imagem/foto4.jpg'></li>").insertBefore("li:first-child");
+                $("<li><img src='imagem/foto5.jpg'></li>").insertAfter("li:nth(2)");
+                //Estou inserindo um elemento depois do ultimo
+                //para isso referenciei io objeto que quero inserir e aonde
+                //$("Objeto que quer inserir").inserAfter("onde")
+                // referenciando o "li" e colocando onde :last-child
+                //então se quisesse inserir antes insertBefore então ficaria antes do último
+                //se quisesse que fosse inserida antes da primeira "li:first-child"
+                //e para escolher a posição nth(e a posição)
+
+			} )
+		
+		</script>
+        
+    </head>
+
+    <body>
+		<ul>
+        	<li><img src="imagem/foto1.jpg"></li>
+            <li><img src="imagem/foto2.jpg"></li>
+            <li><img src="imagem/foto3.jpg"></li>
+            
+        </ul>
+
+    </body>
+
+</html>
