@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title> 
+        <!-- Remover, alterar e embrulhar elementos-->
+        
+        <script src="jquery-3.2.1.min.js"></script>
+        <script>
+			$(function(e) {
+                //removendo elemento
+                //$("li.especifico").remove();
+
+                //podendo usar li:first ou li:last ou referenciando em uma classe ou id li.especifico
+
+                //Agora alterando o conteúdo de um elemento
+
+                $("li:last").replaceWith("<li>Curso Bootstrap</li>");
+                // Usar .replaceWith("<li>Curso Bootstrap</li>" para modificar um elemento
+
+                //Agora mostrando como embrulhar um elemento como se você colocasse ele dentro de uma div
+                $("ul").wrapAll("<div style='border:1px solid #Ccc'></div>");
+                //wrapInner é como se eu abraçasse dentro do ul e o wrapAll Abraçasse por fora do ul
+				
+
+
+			})
+		</script>        
+    </head>
+
+    <body>
+    	
+      
+		<ul>
+        		
+            <li>Curso HTML5 Essencial</li>
+            <li>Curso CSS3 Essencial</li>
+            <li>Curso Javascript Essencial</li>
+            <li>Curso jQuery Fundamental</li>
+        </ul>
+        
+    </body>
+
+</html>
