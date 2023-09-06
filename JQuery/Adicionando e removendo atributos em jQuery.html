@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+        <!--Como alterar atributos via jQuery-->
+        
+        <script src="jquery-3.2.1.min.js"></script>
+        <script>
+			$( function(e) {
+                $("a.Montanha").attr("title", "Alpes suiços");
+                $("a.Montanha").attr("target", "_blank");//aqui ele está mudando o target para redirecionar para
+                //uma nova aba ao clicar na imagem
+
+
+                //estamos referenciando o objeto "A" adicinonei a classe montanha para poder referênciar somente ela
+                //attr para mudar inserir ou atributo você referência o atributo e depois inserir a mudança 
+                //ex: attr("atributo a ser mudado", "mudança")
+
+                //você pode alterar ou remover algum atributo
+                //Ex:
+                $("a").removeAttr("target"); //removendo o atributo
+			} )
+		</script>
+        
+    </head>
+
+    <body>
+    	
+    	<a class="Montanha" href="imagem/foto6_grande.jpg"><img src="imagem/foto6.jpg"></a>
+
+    </body>
+
+</html>
