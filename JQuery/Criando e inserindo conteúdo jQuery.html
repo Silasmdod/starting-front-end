@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+        <!--Aprendendo a criar e pegar conteúdo-->
+        
+        <script src="jquery-3.2.1.min.js"></script>
+        <script>
+			$( function(e) {
+                $("h1").html("Formação Desenvolvimento Web completo")
+                //aqui estou apernas referenciando o elemento porque ele já existe
+                //e colocando a informação dentro dele a partir do html
+
+
+
+                $("ul#listacursos").prepend("<li>Curso PHP fundamental</li>");
+                $("ul#listacursos").append("<li>Curso Bootstrap fundamental</li>");//adicionando elementos de outra forma
+                
+                /*
+                primeiro você diz qual elemento vai dicionar "ul" sendo o primeiro
+                e depois de referênciar você adicionar o .append("") para inserir o elemento novo
+                e o que está dentro co elemento
+                e .prepend para adicionar no começo da lista*/
+
+			} )
+		</script>
+        
+    </head>
+
+    <body>
+    	<h1></h1>
+    
+		<ul id="listacursos">
+            <li>Curso HTML5 Essencial</li>
+            <li>Curso CSS3 Essencial</li>
+            <li>Curso Javascript Essencial</li>
+            <li>Curso jQuery Fundamental</li>
+        </ul>
+
+    </body>
+
+</html>
