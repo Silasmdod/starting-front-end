@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+        <!--Como detectar as dimensões de um documento e 
+            saber o tamanho das janelas e de um documento-->
+        <style>
+			#janela { width:200px; height:1000px; background-color:#069; border:5px solid #000 }
+		</style>
+        
+        <script src="jquery-3.2.1.min.js"></script>
+        <script>
+			jQuery(document).ready(function() {
+                //fazer um código em jQuery pra identificar o tamnho dessa janela
+                console.log(" A largura da minha janela é: " +$(window).height() ); //vendo a altura
+                console.log(" A largura da minha janela é: " +$(window).width() );//vendo a largura
+
+
+                console.log(" A largura da minha documento é: " +$(document).height() );
+                console.log(" A largura da minha documento é: " +$(document).width() );
+						
+			});
+		</script>        
+    </head>
+
+    <body>
+		
+        <div id="janela">
+        
+        </div>
+
+    </body>
+
+</html>
