@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+        <!--Explicando a diferença entre position e -->
+        <style>
+			#janela { position:absolute; top:20px; left:50px; width:200px; height:200px; background-color:#069; border:5px solid #000; padding:0 10px; }		
+        	#janelinha { position:absolute; top:10px; left:10px; width:50px; height:50px; background-color:#F00 } 
+        </style>
+        
+        <script src="jquery-3.2.1.min.js"></script>
+        <script>
+			$(function(e) {
+                console.log('Posição top do elemento: ' +$('#janela').position().top);
+                console.log('Posição top do elemento: ' +$('#janela').position().left);
+
+                /*console.log('Posição top do elemento: ' +$('#janelinha').position().top);
+                console.log('Posição top do elemento: ' +$('#janelinha').position().left);*/
+                //se eu quiser ver em respeito ao  body ou seja ao superior a div janela que seria o body
+                //ou a main usamos offset ao invés de position
+                console.log('Posição top do elemento: ' +$('#janelinha').offset().top);
+                console.log('Posição top do elemento: ' +$('#janelinha').offset().left);//aqui estou rerotando em realação ao body
+				
+			});
+		</script>        
+    </head>
+
+    <body>
+		
+        <div id="janela">
+        
+        	<div id="janelinha"></div>
+        
+        </div>
+
+    </body>
+
+</html>
