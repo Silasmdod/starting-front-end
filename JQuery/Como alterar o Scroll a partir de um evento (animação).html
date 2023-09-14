@@ -29,13 +29,13 @@
 
 			#primeira{
 				width: 300px;
-				height: 500px;
+				height: 800px;
 				background-color:aquamarine ;
 			}
 
 			#segunda{
 				width: 300px;
-				height: 500px;
+				height: 800px;
 				background-color:blueviolet ;
 			}
 					
@@ -48,12 +48,25 @@
 
 				$('nav li:nth-child(2)').click( function(e){ 
 					//aqui se eu clicar no segundo elemento vai fazer alguma coisa mas ainda não está definido o que
-					$('html, body').animate({scrollTop:980}, 1000); //scrollTop ele vai fazer a div debaixo correr para cima MAS na VERDADE ele está afastando o scroll do top
+					//$('html, body').animate({scrollTop:800}, 1000);
+					//scrollTop ele vai fazer a div debaixo correr para cima MAS na VERDADE ele está afastando o scroll do top
 					//o 1000 é porque é em milesegundos então fará com que aconteça em um segundo
 					//após isso acontecerá a animação do elemento 2
 
-				});
+					/*---------------
+					Agora eu vou adequar está mesma animação de modo que seja UNIVERSAL
+					em diferentes tipos de tela
 
+					acho que vai ser direcionando para um elemento
+					*/
+					console.log($('#segunda').offset().top);// aqui estou descobrindo a posição do offset do elemento #segunda
+					//Então para quando eu clicar a animação do scroll ser diretionada ao elemtno eu uso a busca pelo offset como coordenada
+					//então independente de onde estiver no tamanho da tela, será a ele que o scroll vai 
+					
+					$('html, body').animate({scrollTop:$('#segunda').offset().top}, 1000);
+					//agora o scrollTop irá aonde o segunda se encontrar no body 
+
+				});
 			});			
 		</script>   
     </head>
