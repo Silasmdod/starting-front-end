@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+        <!--EVENTO DE CLICK 
+        aprendendo algumas opções de aplicar um evendo a um botão-->
+        
+        <script src="jquery-3.2.1.min.js"></script>
+        <script>
+            $(function(){
+                //relacionando o #cursohtml quando for clicado vai chamar função que tem o alert
+                $('#cursohtml').click(function(){
+                    alert("Clicou no botão html");
+                })
+
+                //Existe também o "on" que faz com que eu escolhe quando essa ação vai acontecer, seja por click ou não
+                //ou mais
+
+                function mostrarMensagem(){
+                    alert("Passou o mouse por cima do botão css");
+                    $('#cursocss').off("mouseover", mostrarMensagem);
+                    //fazendo com o que o botão só seja acionado uma vez
+                    //pos você passará uma vez o mouse por cima está função será chamada e o alert dado
+                    //porém o .off("mouseover") também será acionado
+
+                    //e se usarmos apenas com o off mataremos qualquer evento possível 
+                    // ex: $('#cursocss').off(); está todos os eventos matados
+                    
+                }
+
+                function mostrarMensagem2(){
+                    alert("Clicou no botão css");
+                    
+                }
+                $('#cursocss').on("mouseover", mostrarMensagem);//mouseover é passar o mouse em cima
+                //chamou colocando o on aqui fora e criou uma função ali em cima
+
+                //então se eu quiser que também tenha o click tenho que criar uma outr função e também chama-la
+                $('#cursocss').on("click", mostrarMensagem2);
+               
+
+            })
+					
+		</script>        
+    </head>
+
+    <body>
+        <input type="button" id="cursohtml" value="Curso HTML5" /> <!-- botão-->
+        <input type="button" id="cursocss" 	value="Curso CSS3" />
+        
+        
+        
+    </body>
+
+</html>
