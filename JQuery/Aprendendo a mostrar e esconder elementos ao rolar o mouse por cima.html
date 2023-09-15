@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+        <!--Aprendendo como mostrar e esconder elementos através ao rolar o mouse por cima-->
+        <style>
+			#janela { width:300px; height:300px; background-color:#069; margin-top:20px }
+		</style>
+        
+        <script src="jquery-3.2.1.min.js"></script>
+        <script>
+            $(function(e){
+                $('#janela').hide(); //o hide é um elemento usado para ocultar o elemento selecionado
+                //agora vou fazer ações para os botões
+
+                //$('#mostrar').click(function(e){
+                   // $('#janela').show();//agora fazendo o inverso de esconder mostrar que é usando o 
+                    //.show();
+
+
+               // });
+
+               // $('#esconder').click(function(){
+                   // $('#janela').hide();
+                //});
+
+                //Posso também apenas criar uma função que esconda e mostre e apenas chamar elas ao colocar um evento
+
+                //aqui chamando a função
+                $('#mostrar').hover(mostrarElemento, esconderElemento);//o hover age quando você coloca o mouse
+                //por cima então e quando eu tirar o mouse de cima ele desaparecerá 
+
+                //agora esconder
+
+            })
+
+            function mostrarElemento(e){
+                $('#janela').show();
+            }
+
+            function esconderElemento(e){
+                $('#janela').hide();
+            }
+			
+		</script>        
+    </head>
+
+    <body>
+        <input type="button" id="mostrar" 	value="Mostrar" />
+        
+        
+        <div id="janela"></div>
+    </body>
+
+</html>
