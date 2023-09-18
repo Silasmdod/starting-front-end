@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+        <!-- APRENDENDO A APLICAR UMA AÇÃO VIA UM PARÂMETRO DE UMA FUNÇÃO-->
+        
+        <style>
+			#janela { border:1px solid #666; width:200px; height:200px; margin-top:10px }
+		</style>
+        
+        <script src="jquery-3.2.1.min.js"></script>
+        <script>
+            function aplicaCor(e){//para fazer a mudança de parametro é necessário colocar um parâmetro
+                //agora vou fazer ele receber o parâmetro
+                //$cor = e.data.cor
+                //aqui ele está recebendo do parametro e buscando isso no parâmetro para ser recebido pelo $cor
+                $('#janela').css('background-color',e.data.cor);//aqui criando a função que atribui a cor ao elemento
+                $('#janela').css('width',e.data.largura);
+                //e.data é o parametro o data é o recebido de informação e depois do ponto a informação "largura"
+            }
+
+            //function aplicaCorVermelho(){
+              //  $('#janela').css('background-color', 'red');
+            //}
+
+           
+            //esses eventos só podem ser disparados depois do carregamento do DOM da página por isso usamos a função inicial 
+            $(function(){
+                //o e vai receber o parametro que vou enviar entre o evento e a função
+                //sendo assim atribuido a ele o parâmetro
+                $('#botaoazul').on("click",{cor:'blue', largura:'250px'} , aplicaCor);//aqui criando o evento que vai retornar a função 
+                //Então ao invés de criar várias funções para fazer diferentes características de uma mesma função
+                //vamos agor aprender mudar o parâmetro da função para o evento
+                $('#botaovermelho').on("click", {cor:'red',largura:'350px'} ,aplicaCor);
+                $('#botaoverde').on("click", {cor:'green' ,largura:'450px'}, aplicaCor);
+
+            })
+
+
+
+	 	</script>        
+    </head>
+    
+    
+
+    <body>
+    	<input type="submit" id="botaoazul" 	value="azul">
+        <input type="submit" id="botaovermelho" value="vermelho">
+        <input type="submit" id="botaoverde" 	value="verde">
+        
+        <div id="janela"></div>
+    </body>
+</html>
