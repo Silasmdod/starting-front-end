@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+		<!--APRENDENDO EFEITOS DE FADIN FADEOUT FADETO E FADETOOGLE
+		                      ENTRADA E SAÍDA-->
+        <style>
+			#janela { width:300px; height:300px; background-color:#069; margin-top:20px }
+		</style>
+        
+        <script src="jquery-3.2.1.min.js"></script>
+        <script>
+			$( function(e) {			
+				$('#mostrar').click( mostrarObjeto )
+				$('#esconder').click( esconderObjeto )
+				$('#reverso').click( reversoObjeto )
+			})
+			
+			function esconderObjeto() {
+				$('#janela').fadeOut(500);//fazendo o fadeout que é para esconder, ou sumir
+				
+			}
+
+			function mostrarObjeto() {
+				$('#janela').fadeIn(500);//fazendo o fadein que é para aparecer
+				
+			}								
+			
+			function reversoObjeto() {
+				$('#janela').fadeToggle(500);//mesma coisa do toogle só que com o efeito de fadein ou fadeout
+				
+			}											
+
+		</script>        
+    </head>
+
+    <body>
+        <input type="button" id="mostrar" 		value="Fade in" />
+        <input type="button" id="esconder" 		value="Fade out" />
+        <input type="button" id="reverso" 		value="Fade in/out" />
+        
+        <div id="janela"></div>
+    </body>
+
+</html>
