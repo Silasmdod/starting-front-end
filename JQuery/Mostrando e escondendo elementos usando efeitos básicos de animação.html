@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+		<!--EFEITOS BÁSICOS DE ANIMAÇÃO-->
+        <style>
+			#janela { width:300px; height:300px; background-color:#069; margin-top:20px }
+		</style>
+        
+        <script src="jquery-3.2.1.min.js"></script>
+        <script>
+			$( function(e) {			
+				$('#mostrar').click( mostrarObjeto )
+				$('#esconder').click( esconderObjeto )
+				$('#reverso').click( reverterObjeto )
+			})
+			
+			function esconderObjeto() {
+				$('#janela').hide(300);// dentro do hide você pode colocar quantos milesegundos você quer que ele faça
+				//o que está sendo proposto
+			
+			}
+
+			function mostrarObjeto() {
+				//vamos fazer tipo um disparo
+				$('#janela').show(2000,function(e){//quando ele terminar nos dois segundos de amostrar ele vai dar o alert
+					alert("Finalizou a animação");
+					
+
+				});
+				
+			}
+
+			function reverterObjeto() {
+				//o reverso a gente usa o toggle que ele faz o contrário da ultima ação sempre
+				$('#janela').toggle(300);//o toggle faz o contrário sempre se estiver aparecendo ele some
+				//se estiver sumido ele aperece
+			
+			}
+		</script>        
+    </head>
+
+    <body>
+        <input type="button" id="mostrar" 	value="Mostrar" />
+        <input type="button" id="esconder" 	value="Esconder" />
+        <input type="button" id="reverso" 	value="Reverso" />
+        
+        <div id="janela"></div>
+    </body>
+
+</html>
