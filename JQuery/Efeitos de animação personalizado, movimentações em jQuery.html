@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+        <!--EFEITOS DE ANIMAÇÃO PERSONALIZADO
+        MOVIMENTAÇÕES-->
+        <style>
+			#janela { position:absolute; width:300px; height:300px; background-color:#069;  }
+		</style>
+        
+        <script src="jquery-3.2.1.min.js"></script>
+        <script>
+            //criando a função para mover o objeto
+            function moverObjeto(){
+                //dessa vez utilizando o animate ou seja você vai animar
+                //e dentro das chaves dentro dos parênteses você diz para aonde você vai animar
+                //então se eu quero que ele vá para direita quero que ele se afaste os pixels a direção contrária ou seja mais
+                //300 pixels a direita significa left:300 se quero que vá para baixo junto depois do 300 coloco, top então ele irá mais 300 píxels para baixo do top
+                //e virse e versa se eu quiser as direções contrárias mas tbm colocando quantos pixels
+                //exemplo: {left:300, top:100}
+
+                //{left:300} depois dos dois pontos é a quantidade de pixels que você quer que ele se mova a direção
+                //e depois coloca a vírgula fora das chaves para dar os milesegundos
+
+                //também dá para colocar alguns efeitos, entre aspas após os milesegundos
+                //se for "linear" ele vai na mesma aceleração o tempo todo
+                //se for "swing" ele vai dar uma freiada no final
+
+                //se quiser acessar a documentação de animação do jQuery
+                //pesquisa jQuery documentation animate
+
+                //e no final se você quiser que seja disparado um ação no final da animação só colocar a virgula após a animação e colocar a a função
+                $('#janela').animate({left:300}, 1000,"swing", function(e){
+                    alert("Finalizou");
+                });
+
+            }
+
+
+			$( function(e) {	
+                //criando o evento
+                $('#direita').click(moverObjeto);		
+
+			})
+
+		</script>        
+    </head>
+
+    <body>
+        <input type="button" id="direita" 	value="Mover p Direita" />
+        
+        <div id="janela"></div>
+    </body>
+
+</html>
