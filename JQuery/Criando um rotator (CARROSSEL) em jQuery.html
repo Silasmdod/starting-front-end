@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+        <!--CRIANDO UM RATATOR
+        OU UM ROTAÇÃO DE IMAGENS
+    ou o famoso CARROSEL -->
+        <style>
+            #principal{position: absolute; height: 200px;
+                clip: rect(0 200px 200px 0); /* o clip é como se fosse uma mascara dentro da div você vai 
+                recortar a div no tamnho que você quer que ele fique
+                então ele começa na posição zero 0 tem 200px de altura 200px de largura e volta para a posição 0
+                ex: 
+                rect quer dizer retângulo
+                clip:rect(0 200px 200px 0);*/
+            
+            /*o clip faz como se fosse uma mascara dentro da div*/
+            }
+			#janela { position:relative;
+                height:200px;
+                top: 0;left:0;
+
+            
+            
+            }
+            #janela img {float: left;}
+
+
+            #info { position: absolute; top: 300px; }
+            
+		</style>
+        
+        <script src="jquery-3.2.1.min.js"></script>       
+        <script>
+            //criando uma função que seja mais universal
+
+            var limite;//então estou criando uma variável que vai acabar recebendo um limite
+
+
+            function moverFotos(){//fazendo uma função que vai fazer animação e a movimentação da div janela
+                
+                //se eu quero que ela anime pra esquerda coloco entre as aspas junto com o menos igual
+                // para ela fazer isso compassadamente"-=200"
+
+                $('#janela').animate({left:"-=200"}, 1000, function(e){
+                    
+                    //o function pode ser usado para saber quando finalizou e vou usar isso para explicar ao meu info
+                    // qual é a posição atual do elemento janela
+                    //então eu boto
+                    $('#info').html( $('#janela').position().left);
+                    //info recebe html de janela na positção left
+                    if($('#janela').position().left == limite){ 
+                        //agora fazendo ele voltar até o inicial toda vez que chegar a -800
+                        //O "final" do carrossel, 
+                        $('#janela').css('left',0);//aqui dizendo para ele ir a posição zero
+                        //Carrosel feito
+
+                    }
+                
+
+                    });
+
+            }
+			$( function(e) {
+                limite = $('#janela img').length * $('#janela img').width() * -1;
+                //aqui limite está recebendo quantas imagens dentro de janelas lenght é quantidade
+                // e tenho que multiplicar a largura de cada foto pela quantidade então chamo de novo a div o elemento 
+                //chamo a largura width enquanto está sendo multiplicado para no meu alert ele dizer de quanto é o tamanho
+                //agora o tamanho da posição final na condição para retornar a base zero sempre estará atualizado mesmo que
+                //se insira novas imagens pois o cálculo está feito para sempre fazer isso de modo automático
+                alert("O limite é de: " + limite);
+                //está dizendo quantas imagens eu tenho
+
+
+                //fazendo o carrossel sem efeito manual mas dentro do javascrip
+                $('#janela').append('<img>'); //colocando uma nova imagem
+                $('#janela img:last').attr('src', 'imagens/foto1.jpg');//aqui o atributo para aquela imagem
+                //Então dessa forma eu estou adicionando a primeira foto na ultima posição
+                //dessa forma não importa então quantas imagens eu colocar ela sempre ficará em último e assim
+                //não será muito necessário fazer contagem de espaço
+
+
+
+
+                //o setInterval faz a execução de forma cíclica
+                setInterval(moverFotos, 2000);
+                //então acada 2 segundos o moverFotos é chamado
+
+                //damos a sensação ao usuário de que a foto está havendo um carrosel colocando uma foto no inicio e uma no final sendo
+                //as mesmas e quando chegar no final, você manda o banner de volta pro lugar do número um e o usuário
+                //não vai perceber a rotação, pois se transicionasse da ultima imagem a 1 daria para perceber alguma 
+                //incongruência estética
+
+
+                
+            
+                
+	
+			});	
+		</script>        
+    </head>
+
+    <body>
+        <div id="principal">
+            <div id="janela">
+                <img src="imagens/foto1.jpg" alt="">
+                <img src="imagens/foto2.jpg" alt="">
+                <img src="imagens/foto3.jpg" alt="">
+                <img src="imagens/foto4.jpg" alt="">
+                <img src="imagens/foto5.jpg" alt="">
+                
+
+                <!--<img src="imagens/foto1.jpg" alt="">
+                Para fazer o malabismo de não estranhar o carrosel colocando a primeira foto no ultimo colocado é um método manual
+            vamos agora aprender o método dentro do javascript usando o jQuery--> 
+            </div>
+
+            <div id="info">
+                <!--Estamos fazendo o info para saber qual o limite do left para saber quando eu vou precisar voltar-->
+            </div>
+        </div>
+    </body>
+
+</html>
