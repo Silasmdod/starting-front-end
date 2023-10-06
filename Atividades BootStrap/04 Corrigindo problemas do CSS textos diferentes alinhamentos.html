@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Curso de Bootstrap - Rows</title>
+        <!-- CORRIGINDO PROBLEMAS DO CSS 
+        COMO TEXTOS DIFERENTES FICAREM ALINHADOS-->
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=devide-width, initial-scale=1"> 
+        
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            p, h1 { text-align: center; font-family:Arial,sans-serif}
+            img.icone {max-width: 150px; margin:0 auto; display: block}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="col-sm-6 col-md-4 col-lg-2">
+                <img class="icone" src="../img/icone_adobe_muse_grande.png">
+                <h1>Adobe Muse</h1>
+                <!-- Aprendendo a deixar que tudo fique normal mesmo tendo textos de tamanhos diferentes-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula iaculis nibh consectetur adipiscing elit. Proin vehicula iaculis nibh</p>
+            </div> 
+            <div class="col-sm-6 col-md-4 col-lg-2">
+                <img class="icone" src="../img/icone_adobe_portfolio_grande.png">
+                <h1>Adobe Portfolio</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula iaculis nibh</p>
+            </div>
+
+            <div class="clearfix visible-sm-block"></div>
+            <!-- O clearfix é básicamente o que a gente fazia no html direto com clear all para corrigir esse problema
+            
+            em seguida colocamos visible-sm-block para ele entender que é somente quando estamos na sibilidade do small no
+             tamanho small de layout, dependendo do problema é bom um inline-block também -->
+
+
+
+
+            <div class="col-sm-6 col-md-4 col-lg-2">
+                <img class="icone" src="../img/icone_aftereffects_grande.png">
+                <h1>Adobe After Effects</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula iaculis nibh</p>
+            </div>
+
+            <div class="clearfix visible-md-block"></div>
+            <!-- depois da terceira coluna fazer a mesma coisa só mudar o tamanho do sm que é small para layouts de tablet
+            para md que é tamanho mediun para desktops-->
+
+
+
+            <div class="col-sm-6 col-md-4 col-lg-2">
+                <img class="icone" src="../img/icone_css_grande.png">
+                <h1>CSS 3</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula iaculis nibh</p>
+            </div> 
+            <div class="col-sm-6 col-md-4 col-lg-2">
+                <img class="icone" src="../img/icone_html_grande.png">
+                <h1>HTML 5</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula iaculis nibh</p>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2">
+                <img class="icone" src="../img/icone_google_adwords_grande.png">
+                <h1>Google Adwords</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula iaculis nibh</p>
+            </div>                
+        </div>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/jquery.js"></script>
+    </body>
+</html>
